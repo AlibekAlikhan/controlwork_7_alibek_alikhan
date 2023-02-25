@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Detail{% endblock %}
 {% block navbar %}
-    <a class="btn btn-primary" href="{% url 'index_article' %}" role="button">Home</a>
+<a href="{% url 'index_article' %}" >Home</a>
 {% endblock %}
 {% block content %}
-    <div class="container">
+<div class="container">
     <form method="post">
         {%include 'partial/article_form.html' with button_text='Создать'%}
+        <a class="btn btn-primary" href="{% url 'index_article' %}" role="button">Отмена</a>
     </form>
 
 
-{% endblock %}
+    {% endblock %}

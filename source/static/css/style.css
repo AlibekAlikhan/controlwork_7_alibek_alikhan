@@ -2,9 +2,10 @@ body{
     background-image: url("https://img5.goodfon.ru/wallpaper/nbig/c/dc/kirpich-kirpichnaia-stena-fon-fotofon-tekstura.jpg");
 }
 .navbar{
+    padding-left: 20px;
     font-size: 2rem;
   text-align: center;
-  background-color: black;
+  background-color: #807a7a;;
 }
 .navbar a{
     text-decoration: none;

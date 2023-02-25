@@ -33,7 +33,7 @@ def article_update(request: WSGIRequest, pk):
     article.update()
     if request.method == "POST":
         form = ArticleForm(request.POST, instance=article)
-        if  form.is_valid():
+        if form.is_valid():
             form.save()
             return redirect("index_article")
         return render(request, "article_update.html", context={"form": form, "article": article})

@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -15,7 +14,9 @@ class Migration(migrations.Migration):
             name='Article',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('status', models.CharField(choices=[('active', 'Активна'), ('blocked', 'Заблокировано')], default='active', max_length=20, verbose_name='Статус')),
+                ('status',
+                 models.CharField(choices=[('active', 'Активна'), ('blocked', 'Заблокировано')], default='active',
+                                  max_length=20, verbose_name='Статус')),
                 ('name', models.CharField(max_length=25, verbose_name='Статус')),
                 ('email', models.EmailField(max_length=254, verbose_name='Email')),
                 ('text', models.TextField(max_length=3000, null=True, verbose_name='Текст')),
