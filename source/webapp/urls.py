@@ -1,6 +1,6 @@
 from django.urls import path
 
-from webapp.views.articles import books_view, book_create, book_update, deleted, deleted_confirm
+from webapp.views.books import books_view, book_create, book_update, deleted, deleted_confirm
 
 urlpatterns = [
     path('', books_view, name="index_book"),
