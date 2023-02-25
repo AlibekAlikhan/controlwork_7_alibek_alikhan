@@ -10,11 +10,12 @@ from webapp.models import Article
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
-        fields = ("status", "text", "detail_text")
+        fields = ("status", "name", "email", "text")
         labels = {
             'status': 'Статус',
+            'name': 'Имя пользователя',
+            'email': 'Email',
             'text': 'Текст',
-            'detail_text': 'Детальный текст',
         }
 
     def clean_text(self):
