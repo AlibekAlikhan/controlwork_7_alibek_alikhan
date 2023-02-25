@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Detail{% endblock %}
+{% block content %}
+<div class="container">
+    <form method="post">
+        {%include 'partial/book_form.html' with button_text='изменить'%}
+    </form>
+</div>
+
+{% endblock %}

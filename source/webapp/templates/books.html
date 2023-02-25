@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block navbar %}
+<div class="navbar">
+    <a href="{% url 'create_book' %}">Add Book</a>
+</div>
+{% endblock %}
+{% block content %}
+{% for book in books %}
+<div class="card" style="color: white; background-color: #807a7a;; margin-top: 20px">
+    <h5 class="card-header">{{book.name}}</h5>
+    <div class="card-body">
+        <h5 class="card-title">{{book.email}}</h5>
+        <p class="card-text">{{book.text}}</p>
+        <a href="{% url 'book_delit' book.pk%}" class="btn btn-primary">Delete</a>
+        <a href="{% url 'book_update' book.pk%}" class="btn btn-primary">Update</a>
+    </div>
+</div>
+<hr>
+{% endfor %}
+{% endblock %}

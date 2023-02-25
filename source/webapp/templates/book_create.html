@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Detail{% endblock %}
+{% block content %}
+<div class="container">
+    <form method="post">
+        {%include 'partial/book_form.html' with button_text='Создать'%}
+        <a class="btn btn-primary" href="{% url 'index_book' %}" role="button">Отмена</a>
+    </form>
+
+
+    {% endblock %}

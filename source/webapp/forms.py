@@ -3,12 +3,12 @@ from django.core.exceptions import ValidationError
 
 from django.forms import widgets
 
-from webapp.models import Article
+from webapp.models import Book
 
 
-class ArticleForm(forms.ModelForm):
+class BookForm(forms.ModelForm):
     class Meta:
-        model = Article
+        model = Book
         fields = ("name", "email", "text")
         labels = {
             'name': 'Имя пользователя',
